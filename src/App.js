@@ -21,7 +21,7 @@ function App() {
           <Route path="/saved-recipes" element={<SavedRecipes />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/update-user" element={<UpdateUser />} />
-          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/user" element={<UserProfile />} />
         </Routes>
       </Router>
     </div>

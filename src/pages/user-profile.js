@@ -29,7 +29,6 @@ const UserProfile = () => {
   return (
     <div className="user-profile">
       <h2>User Profile</h2>
-      <p><strong>Name:</strong> {user.name}</p>
       <p><strong>Email:</strong> {user.email}</p>
       <p><strong>Username:</strong> {user.username}</p>
       {/* Add more fields as needed */}
