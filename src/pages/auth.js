@@ -25,10 +25,11 @@ const Login = () => {
     event.preventDefault();
 
     try {
-      const result = await axios.post("http://localhost:3001/auth/login", {
+      const result = await axios.post("https://recipesback.onrender.com/auth/login", {
         username,
         password,
       });
+      
 
       setCookies("access_token", result.data.token);
       window.localStorage.setItem("userID", result.data.userID);
@@ -78,7 +79,7 @@ const Register = () => {
       event.preventDefault();
   
       try {
-        await axios.post("http://localhost:3001/auth/register", {
+        await axios.post("https://recipesback.onrender.com/auth/register", {
           username,
           password,
           email, // Include email in the request

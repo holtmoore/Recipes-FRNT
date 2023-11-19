@@ -26,7 +26,7 @@ const UpdateUser = () => {
         event.preventDefault();
         try {
             await axios.put(
-                `http://localhost:3001/auth/update-user/${userID}`,
+                `https://recipesback.onrender.com/auth/update-user/${userID}`,
                 user,
                 { headers: { Authorization: `Bearer ${cookies.access_token}` } }
             );
@@ -42,7 +42,7 @@ const UpdateUser = () => {
         event.preventDefault();
         if (window.confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
             try {
-                await axios.delete(`http://localhost:3001/auth/delete-user/${userID}`, {
+                await axios.delete(`https://recipesback.onrender.com/auth/delete-user/${userID}`, {
                     headers: { Authorization: `Bearer ${cookies.access_token}` },
                 });
 

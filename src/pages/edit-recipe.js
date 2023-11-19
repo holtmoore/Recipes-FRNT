@@ -10,7 +10,7 @@ const EditRecipes = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const response = await axios.get(`http://localhost:3001/recipes/${recipeId}`);
+        const response = await axios.get(`https://recipesback.onrender.com/recipes/${recipeId}`);
         setRecipe(response.data);
       } catch (err) {
         console.error(err);
@@ -23,7 +23,7 @@ const EditRecipes = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:3001/recipes/${recipeId}`, recipe);
+      await axios.put(`https://recipesback.onrender.com/recipes/${recipeId}`, recipe);
       navigate('/'); // Redirect to home or another appropriate page
     } catch (err) {
       console.error(err);

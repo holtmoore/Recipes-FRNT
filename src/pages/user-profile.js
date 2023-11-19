@@ -11,7 +11,7 @@ const UserProfile = () => {
     const fetchUserData = async () => {
       try {
         // Change the URL structure to use a query parameter
-        const response = await axios.get(`http://localhost:3001/auth/user?userID=${userID}`);
+        const response = await axios.get(`https://recipesback.onrender.com/auth/user?userID=${userID}`);
         setUser(response.data);
       } catch (error) {
         console.error("Error fetching user data:", error);
