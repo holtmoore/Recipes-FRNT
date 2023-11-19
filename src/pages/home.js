@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useGetUserID } from "../hooks/useGetUserID";
-import { Link } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom"; // Make sure to import Link from react-router-dom
 
 export const Home = () => {
   const [recipes, setRecipes] = useState([]);
@@ -32,7 +32,7 @@ export const Home = () => {
 
     fetchRecipes();
     fetchSavedRecipes();
-  }, []);
+  }, [userID]);  // Added userID as a dependency
 
   const saveRecipe = async (recipeID) => {
     try {
@@ -62,8 +62,8 @@ export const Home = () => {
               >
                 {isRecipeSaved(recipe._id) ? "Saved" : "Save"}
               </button>
-              {/* Add Edit button using Link */}
-              <Link to={`/EditRecipe/${recipe._id}`}>Edit</Link>
+              {/* Unconditionally render Edit button */}
+              <Link to={`/edit-recipe/${recipe._id}`}>Edit</Link>
             </div>
             <div className="instructions">
               <p>{recipe.instructions}</p>

@@ -5,7 +5,8 @@ import { Auth } from "./pages/auth";
 import { CreateRecipe } from "./pages/create-recipe";
 import { Home } from "./pages/home";
 import { SavedRecipes } from "./pages/saved-recipes";
-import EditRecipe from "./pages/EditRecipe"; // Corrected import statement
+import  UpdateUser  from "./pages/update-user";
+
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
           <Route path="/create-recipe" element={<CreateRecipe />} />
           <Route path="/saved-recipes" element={<SavedRecipes />} />
           <Route path="/auth" element={<Auth />} />
-          <Route path="/EditRecipe/:recipeId" element={<EditRecipe />} />
+          <Route path="/update-user" element={<UpdateUser />} />
         </Routes>
       </Router>
     </div>
